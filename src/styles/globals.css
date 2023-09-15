@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Poppins;
+  src: url('/fonts/Poppins-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('/fonts/Poppins-Bold.ttf');
+  font-weight: 700;
+}
+
+:root {
+  /* Colors */
+  --clr-primary-cyan: hsl(180, 66%, 49%);
+  --clr-primary-violet: hsl(257, 27%, 26%);
+
+  --clr-secondary-red: hsl(0, 87%, 67%);
+
+  --clr-neutral-gray: hsl(0, 0%, 75%);
+  --clr-neutral-gray-violet: hsl(257, 7%, 63%);
+  --clr-neutral-dark-blue: hsl(255, 11%, 22%);
+  --clr-neutral-dark-violet: hsl(260, 8%, 14%);
+
+  /* Font size */
+  --font-body: 1.125rem;
+
+  /* Max width */
+  --max-w: 1440px;
+  
+}
