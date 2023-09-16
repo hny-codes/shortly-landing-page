@@ -33,4 +33,18 @@ describe('Main Test', { retries: 3 }, () => {
 
     cy.get('[data-test="desktop-link"]').should('have.length', 5);
   });
+
+  it.only('Hero Component', () => {
+    const title = 'More than just shorter links';
+    const subtitle =
+      'Build your brand\'s recognition and get detailed insights on how your links are performing.';
+
+    // Should exist
+    cy.get('[data-test="hero"]').should('exist');
+
+    cy.get('[data-test="hero-title"]').contains(title);
+    cy.get('[data-test="hero-subtitle"]').contains(subtitle);
+
+    cy.get('[data-test="hero-btn"]').should('exist');
+  });
 });
