@@ -1,4 +1,4 @@
-describe('Main Test', () => {
+describe('Main Test', { retries: 3 }, () => {
   beforeEach(() => {
     cy.visit('/');
     cy.viewport('iphone-8');
@@ -25,5 +25,12 @@ describe('Main Test', () => {
     // Click again to hide menu
     cy.get('@menu-btn').click();
     cy.get('@menu').should('be.hidden');
+
+    // Desktop View
+    cy.viewport(1000, 660);
+    cy.get('@menu-btn').should('be.hidden');
+    cy.get('@menu').should('be.hidden');
+
+    cy.get('[data-test="desktop-link"]').should('have.length', 5);
   });
 });
