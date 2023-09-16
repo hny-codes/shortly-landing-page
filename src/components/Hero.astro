@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from '../images/illustration-working.svg';
+---
+
+<main data-test='hero' class="pt-20">
+  <div class=" text-center relative">
+    <div class="relative w-[130%] left-6">
+      <Image src={HeroImage} alt={'Hero Image'} class={'max-h-96 object-contain'}/>
+    </div>
+    <header class="mt-10 [&>*]:my-4 w-[90%] mx-auto">
+      <h1 data-test='hero-title' class="text-4xl font-bold">More than just shorter links</h1>
+      <p data-test='hero-subtitle' class="text-[--clr-neutral-gray-violet]">Build your brand's recognition and get detailed insights on how your links are performing.</p>
+      <button data-test='hero-btn' class="btn text-white max-w-[10rem] font-bold">Get Started</button>
+    </header>
+  </div>
+</main>
