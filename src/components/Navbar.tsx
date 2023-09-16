@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav data-test='nav'>
+    <nav data-test='nav' className='fixed w-full z-50'>
       <div className='relative flex justify-between items-center w-[90%] mx-auto py-6 sm:max-w-[--max-w]'>
         {/* Menu Popup */}
         <div
