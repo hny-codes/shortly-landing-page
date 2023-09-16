@@ -31,5 +31,10 @@
 
   /* Max width */
   --max-w: 1440px;
-  
+}
+
+@layer components {
+  .btn {
+    @apply relative bg-[--clr-primary-cyan] rounded-full py-3 w-full text-center before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:left-0 before:top-0  before:rounded-full before:hover:bg-white before:hover:opacity-70  before:hover:transition;
+  }
 }
