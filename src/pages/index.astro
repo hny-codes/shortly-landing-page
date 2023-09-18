@@ -2,9 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero.astro';
+import LinkBox from "../components/LinkBox";
 ---
 
 <BaseLayout>
 	<Navbar client:load />
 	<Hero />
+	<LinkBox client:load />
 </BaseLayout>
