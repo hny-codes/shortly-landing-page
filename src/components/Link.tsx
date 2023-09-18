@@ -14,9 +14,10 @@ export default function Link({
       <hr className='border-[1.5px] absolute w-full top-12' />
       <div className='px-4'>
         <p className='overflow-ellipsis truncate'>{original_link}</p>
-        <p className='text-[--clr-primary-cyan] mt-6 mb-4'>{full_short_link}</p>
+        <p data-test='short-link' className='text-[--clr-primary-cyan] mt-6 mb-4'>{full_short_link}</p>
 
         <button
+          data-test='link-item-btn'
           onClick={() => {
             navigator.clipboard.writeText(full_share_link);
             setCopy(true);
