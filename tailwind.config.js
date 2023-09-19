@@ -5,6 +5,10 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'link-mobile': "url('/src/images/bg-shorten-mobile.svg')",
+        'link-desktop': "url('/src/images/bg-shorten-desktop.svg')",
+      },
       fontFamily: {
         Poppins: ['Poppins', 'Poppins-Bold', ...defaultTheme.fontFamily.sans],
       },
