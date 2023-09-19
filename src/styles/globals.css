@@ -39,10 +39,10 @@
   }
 
   .input { 
-    @apply py-2 px-4 rounded-lg;
+    @apply py-2 px-4 md:py-4 rounded-lg;
   }
 
   .error {
-    @apply text-[--clr-secondary-red] mt-2 italic text-sm;
+    @apply text-[--clr-secondary-red] mt-2 italic text-sm md:absolute bottom-5;
   }
 }

@@ -27,16 +27,16 @@ export default function LinkBox() {
   };
 
   return (
-    <div className='mt-40 bg-gray-100'>
-      <div className='bg-link-mobile bg-no-repeat bg-right-top bg-[--clr-primary-violet] w-4/5 mx-auto py-8 rounded-lg relative -top-20'>
+    <div className='mt-40 bg-gray-100 md:text-xl'>
+      <div className='bg-link-mobile md:bg-link-desktop bg-no-repeat bg-right-top md:bg-left-top md:bg-cover bg-[--clr-primary-violet] w-4/5 md:w-full md:max-w-[--max-w] mx-auto py-8 md:py-12 rounded-lg relative -top-20'>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='flex flex-col w-4/5 mx-auto'
+          className='flex flex-col md:flex-row md:gap-4 w-4/5 md:w-[90%] mx-auto'
         >
           <input
             data-test='link-input'
             placeholder='Shorten a link here...'
-            className={`input relative border-4 ${
+            className={`input relative border-4 md:flex-grow placeholder:text-xl ${
               errors.link?.type === 'pattern' ||
               errors.link?.type === 'required'
                 ? 'text-red-500 placeholder:text-[--clr-secondary-red] border-[--clr-secondary-red]'
@@ -59,7 +59,7 @@ export default function LinkBox() {
 
           <button
             data-test='shorten-btn'
-            className='btn bg-[--clr-primary-cyan] text-white font-bold rounded-lg before:rounded-lg mt-4'
+            className='btn bg-[--clr-primary-cyan] text-white font-bold rounded-lg before:rounded-lg mt-4 md:mt-0 md:max-w-[12rem] md:text-xl'
             type='submit'
           >
             Shorten it!
@@ -70,7 +70,7 @@ export default function LinkBox() {
       {/* Links */}
       <ul
         data-test='link-list'
-        className='w-4/5 mx-auto relative -top-10 [&>*]:mb-16'
+        className='w-4/5 md:w-full md:max-w-[--max-w] mx-auto relative -top-10 [&>*]:mb-16 md:[&>*]:mb-6'
       >
         {links.map((link) => (
           <Link
