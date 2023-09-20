@@ -27,7 +27,7 @@ export default function LinkBox() {
   };
 
   return (
-    <div className='mt-40 bg-gray-100 md:text-xl'>
+    <div className='mt-40 bg-gray-100 md:text-xl md:pb-10'>
       <div className='bg-link-mobile md:bg-link-desktop bg-no-repeat bg-right-top md:bg-left-top md:bg-cover bg-[--clr-primary-violet] w-4/5 md:w-full md:max-w-[--max-w] mx-auto py-8 md:py-12 rounded-lg relative -top-20'>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -70,7 +70,7 @@ export default function LinkBox() {
       {/* Links */}
       <ul
         data-test='link-list'
-        className='w-4/5 md:w-full md:max-w-[--max-w] mx-auto relative -top-10 [&>*]:mb-16 md:[&>*]:mb-6'
+        className='w-4/5 md:w-full md:max-w-[--max-w] mx-auto relative -top-10 [&>*]:mb-16 md:[&>*]:mb-0 md:flex md:flex-col md:gap-6'
       >
         {links.map((link) => (
           <Link
