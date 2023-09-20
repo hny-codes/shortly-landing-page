@@ -8,6 +8,8 @@ module.exports = {
       backgroundImage: {
         'link-mobile': "url('/src/images/bg-shorten-mobile.svg')",
         'link-desktop': "url('/src/images/bg-shorten-desktop.svg')",
+        'banner-mobile': "url('/src/images/bg-boost-mobile.svg')",
+        'banner-desktop': "url('/src/images/bg-boost-desktop.svg')",
       },
       fontFamily: {
         Poppins: ['Poppins', 'Poppins-Bold', ...defaultTheme.fontFamily.sans],
