@@ -48,7 +48,7 @@ describe('Main Test', { retries: 3 }, () => {
     cy.get('[data-test="hero-btn"]').should('exist');
   });
 
-  it.only('Link Box', () => {
+  it('Link Box', () => {
     const link = 'https://astro.build/';
     cy.get('[data-test="link-input"]').as('input');
     cy.get('[data-test="shorten-btn"]').as('btn');
@@ -77,6 +77,19 @@ describe('Main Test', { retries: 3 }, () => {
     cy.get('@btn').click();
 
     cy.get('[data-test="list-item"]').should('exist');
-    
+  });
+
+  it.only('Statistic Section Test', () => {
+    const title = 'Advanced Statistics';
+    const subtitle =
+      'Track how your links are performing across the web with our advanced statistics dashboard.';
+
+    // Make sure it exists on DOM
+    cy.get('[data-test="statistics"]').should('exist');
+    cy.get('[data-test="statistic-title"]').contains(title);
+    cy.get('[data-test="statistic-subtitle"]').contains(subtitle);
+
+    // Make sure there are 3 statistic card items
+    cy.get('[data-test="stat-list"]').children().should('have.length', 3);
   });
 });
