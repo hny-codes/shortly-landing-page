@@ -79,7 +79,7 @@ describe('Main Test', { retries: 3 }, () => {
     cy.get('[data-test="list-item"]').should('exist');
   });
 
-  it.only('Statistic Section Test', () => {
+  it('Statistic Section Test', () => {
     const title = 'Advanced Statistics';
     const subtitle =
       'Track how your links are performing across the web with our advanced statistics dashboard.';
@@ -91,5 +91,13 @@ describe('Main Test', { retries: 3 }, () => {
 
     // Make sure there are 3 statistic card items
     cy.get('[data-test="stat-list"]').children().should('have.length', 3);
+  });
+
+  it.only('Banner Test', () => {
+    cy.get('[data-test="banner"]').should('exist');
+    cy.get('[data-test="banner"]').within(() => {
+      cy.get('h2').contains('Boost your links today');
+      cy.get('button').contains('Get Started');
+    });
   });
 });
