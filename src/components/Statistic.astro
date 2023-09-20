@@ -1,0 +1,40 @@
+---
+import StatItem from "./StatItem.astro";
+
+// Stat cards
+import IconBrand from '../images/icon-brand-recognition.svg';
+import IconDetail from '../images/icon-detailed-records.svg';
+import IconCustom from '../images/icon-fully-customizable.svg';
+
+// Stat info
+const brandTitle = 'Brand Recognition';
+const brandInfo = 'Boost your brand recognition with each click. Generic links don\'t mean a thing. Branded links help instill confidence in your content.';
+
+const detailTitle = 'Detailed Records';
+const detailInfo = 'Gain insights into who is clicking your links. Knowiong when and where people engage with your content helps inform better decisions.';
+
+const customTitle = 'Fully Customizable';
+const customInfo = 'Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.';
+
+---
+
+<div data-test='statistics' class="bg-gray-100">
+  <div class="text-center w-[90%] mx-auto">
+    <h2 data-test='statistic-title' class="text-3xl font-bold mb-8">Advanced Statistics</h2>
+    <p data-test='statistic-subtitle' class="text-[--clr-neutral-gray-violet] mb-24">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+
+    <div data-test='stat-list' class="flex flex-col gap-24">
+      <StatItem title={brandTitle} desc={brandInfo} img={IconBrand} />
+      
+      <div class="relative">
+        <span class="bar -top-24 right-0 left-0 mx-auto"></span>
+        <StatItem title={detailTitle} desc={detailInfo} img={IconDetail} />
+      </div>
+      
+      <div class="relative">
+        <span class="bar -top-24  right-0 left-0 mx-auto "></span>
+        <StatItem title={customTitle} desc={customInfo} img={IconCustom} />
+      </div>
+    </div>
+  </div>
+</div>
