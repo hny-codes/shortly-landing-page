@@ -20,19 +20,19 @@ const customInfo = 'Improve brand awareness and content discoverability through 
 
 <div data-test='statistics' class="bg-gray-100">
   <div class="text-center w-[90%] mx-auto">
-    <h2 data-test='statistic-title' class="text-3xl font-bold mb-8">Advanced Statistics</h2>
-    <p data-test='statistic-subtitle' class="text-[--clr-neutral-gray-violet] mb-24">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+    <h2 data-test='statistic-title' class="text-3xl md:text-4xl font-bold mb-8">Advanced Statistics</h2>
+    <p data-test='statistic-subtitle' class="text-[--clr-neutral-gray-violet] md:text-xl md:w-2/5 leading-relaxed md:mx-auto mb-24">Track how your links are performing across the web with our advanced statistics dashboard.</p>
 
-    <div data-test='stat-list' class="flex flex-col gap-24">
+    <div data-test='stat-list' class="flex flex-col md:flex-row gap-24 md:gap-10 md:text-left">
       <StatItem title={brandTitle} desc={brandInfo} img={IconBrand} />
       
-      <div class="relative">
-        <span class="bar -top-24 right-0 left-0 mx-auto"></span>
+      <div class="relative md:mt-10">
+        <span class="bar -top-24 md:top-[6.5rem] right-0 left-0 md:right-auto md:-left-10 mx-auto md:mx-0"></span>
         <StatItem title={detailTitle} desc={detailInfo} img={IconDetail} />
       </div>
       
-      <div class="relative">
-        <span class="bar -top-24  right-0 left-0 mx-auto "></span>
+      <div class="relative md:mt-20">
+        <span class="bar -top-24 md:top-16 right-0 left-0 md:right-auto md:-left-10 mx-auto md:mx-0 "></span>
         <StatItem title={customTitle} desc={customInfo} img={IconCustom} />
       </div>
     </div>

@@ -47,6 +47,6 @@
   }
 
   .bar {
-    @apply bg-[--clr-primary-cyan] h-14 w-2 absolute;
+    @apply bg-[--clr-primary-cyan] h-14 md:h-3 w-2 md:w-10 absolute;
   }
 }

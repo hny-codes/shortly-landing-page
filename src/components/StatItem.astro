@@ -4,12 +4,12 @@ import { Image } from "astro:assets";
 const { title, desc, img } = Astro.props;
 ---
 
-<section data-test='stat-item' class="bg-white">
+<section data-test='stat-item' class="bg-white h-min">
   <div class="flex flex-col items-center relative bottom-12 rounded-lg">
-    <div class="bg-[--clr-primary-violet] w-max p-6 mb-8 rounded-full z-20 relative">
+    <div class="bg-[--clr-primary-violet] w-max p-6 mb-8 rounded-full z-20 relative md:self-start md:ml-10">
       <Image src={img} alt=`${title} image` width={img.width} height={img.height} />
     </div>
-    <h2 class="text-2xl font-bold mb-4">{title}</h2>
+    <h2 class="text-2xl font-bold mb-4 md:self-start md:w-4/5 md:mx-auto">{title}</h2>
     <p class="text-[--clr-neutral-gray-violet] w-4/5 mx-auto leading-relaxed">{desc}</p>
   </div>
 </section>
