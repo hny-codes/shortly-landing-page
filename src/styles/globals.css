@@ -41,6 +41,10 @@
   footer > nav > div > div > a:hover {
     @apply text-[--clr-primary-cyan] transition;
   }
+
+  footer > nav > div > div > p {
+    @apply md:mb-4
+  }
 }
 
 @layer components {
@@ -63,6 +67,6 @@
 
 @layer utilities {
   .footer-flex {
-    @apply flex flex-col gap-2 my-9;
+    @apply flex flex-col gap-2 my-9 md:my-0;
   }
 }
