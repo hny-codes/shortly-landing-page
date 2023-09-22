@@ -93,11 +93,33 @@ describe('Main Test', { retries: 3 }, () => {
     cy.get('[data-test="stat-list"]').children().should('have.length', 3);
   });
 
-  it.only('Banner Test', () => {
+  it('Banner Test', () => {
     cy.get('[data-test="banner"]').should('exist');
     cy.get('[data-test="banner"]').within(() => {
       cy.get('h2').contains('Boost your links today');
       cy.get('button').contains('Get Started');
     });
   });
+
+  it.only('Footer Test', () => {
+    cy.get('footer').should('exist');
+
+    // Check link count
+    cy.get('[data-test="features"]').within(() => {
+      cy.get('a').should('have.length', 3)
+    })
+
+    cy.get('[data-test="resources"]').within(() => {
+      cy.get('a').should('have.length', 3);
+    });
+
+    cy.get('[data-test="company"]').within(() => {
+      cy.get('a').should('have.length', 4);
+    });
+
+    cy.get('[data-test="social"]').within(() => {
+      cy.get('a').should('have.length', 4);
+    });
+
+  })
 });
