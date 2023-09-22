@@ -33,6 +33,16 @@
   --max-w: 1440px;
 }
 
+@layer base {
+  footer > nav > div > div > a {
+    @apply text-[--clr-neutral-gray-violet];
+  }
+
+  footer > nav > div > div > a:hover {
+    @apply text-[--clr-primary-cyan] transition;
+  }
+}
+
 @layer components {
   .btn {
     @apply relative bg-[--clr-primary-cyan] rounded-full py-3 w-full text-center before:content-[''] before:absolute before:bg-transparent before:h-full before:w-full before:left-0 before:top-0  before:rounded-full before:hover:bg-white before:hover:opacity-70  before:hover:transition;
@@ -48,5 +58,11 @@
 
   .bar {
     @apply bg-[--clr-primary-cyan] h-14 md:h-3 w-2 md:w-10 absolute;
+  }
+}
+
+@layer utilities {
+  .footer-flex {
+    @apply flex flex-col gap-2 my-9;
   }
 }
