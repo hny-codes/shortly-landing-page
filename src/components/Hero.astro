@@ -4,11 +4,11 @@ import HeroImage from '../images/illustration-working.svg';
 ---
 
 <main data-test='hero' class="pt-20 md:pt-40">
-  <div class="text-center md:text-left relative md:grid md:grid-cols-2 w-[90%] mx-auto sm:max-w-[--max-w]">
-    <div class="relative sm:w-[130%] left-6 order-1 md:left-24 md:-top-2">
-      <Image src={HeroImage} alt={'Hero Image'} class={'max-h-96 md:max-h-[90%] object-contain'}/>
+  <div class="text-center md:text-left sm:max-w-[--max-w] flex flex-col md:flex-row-reverse md:w-[90%] md:items-center md:mx-auto">
+    <div class="w-full h-[350px] sm:h-[450px] md:h-full overflow-hidden pl-8 md:translate-x-40">
+      <Image src={HeroImage} alt={'Hero Image'} class={'max-h-[600px] md:max-h-[90%] object-cover sm:object-contain w-full h-full object-left'}/>
     </div>
-    <header class="mt-10 [&>*]:my-4">
+    <header class="mt-10 [&>*]:my-4 w-[90%] mx-auto">
       <h1 data-test='hero-title' class="text-4xl md:text-6xl font-bold md:w-[90%] md:leading-[1.2]">More than just shorter links</h1>
       <p data-test='hero-subtitle' class="text-[--clr-neutral-gray-violet] md:text-lg md:w-2/3">Build your brand's recognition and get detailed insights on how your links are performing.</p>
       <button data-test='hero-btn' class="btn text-white max-w-[10rem] font-bold">Get Started</button>
